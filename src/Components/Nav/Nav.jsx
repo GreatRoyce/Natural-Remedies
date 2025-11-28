@@ -13,10 +13,11 @@ function Nav() {
           <nav className="w-full max-w-5xl mx-auto px-4">
             {/* Mobile menu button */}
             <div className="flex justify-between items-center">
-              <div className="text-white hover:cursor-pointer hover:text-brand-clay block sm:hidden"
+              <div
+                className="text-white hover:cursor-pointer hover:text-brand-clay block sm:hidden"
                 onClick={() => setIsOpen(!isOpen)}
               >
-                {isOpen ? <X size={32} /> : <Menu size={32} />} 
+                {isOpen ? <X size={32} /> : <Menu size={32} />}
               </div>
 
               {/* Desktop Navigation */}
@@ -27,17 +28,26 @@ function Nav() {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/root-map" className="text-white hover:text-brand-clay">
+                  <Link
+                    to="/root-map"
+                    className="text-white hover:text-brand-clay"
+                  >
                     Root Map
                   </Link>
                 </li>
                 <li>
-                  <Link to="/ask-us" className="text-white hover:text-brand-clay">
+                  <Link
+                    to="/ask-us"
+                    className="text-white hover:text-brand-clay"
+                  >
                     Ask Us
                   </Link>
                 </li>
                 <li>
-                  <Link to="/guidance" className="text-white hover:text-brand-clay">
+                  <Link
+                    to="/guidance"
+                    className="text-white hover:text-brand-clay"
+                  >
                     Guidance
                   </Link>
                 </li>
@@ -72,12 +82,18 @@ function Nav() {
                   </div>
                 </li>
                 <li>
-                  <Link to="/user-dashboard" className="text-white hover:text-brand-clay">
+                  <Link
+                    to="/user-dashboard"
+                    className="text-white hover:text-brand-clay"
+                  >
                     User Dashboard
                   </Link>
                 </li>
                 <li>
-                  <Link to="/herbalist-dashboard" className="text-white hover:text-brand-clay">
+                  <Link
+                    to="/herbalist-dashboard"
+                    className="text-white hover:text-brand-clay"
+                  >
                     Herbalist Dashboard
                   </Link>
                 </li>
@@ -91,51 +107,57 @@ function Nav() {
       {isOpen && (
         <div className="fixed inset-0 z-40 bg-black/80 backdrop-blur-sm sm:hidden pt-16">
           <div className="flex flex-col items-center justify-start h-full space-y-6 text-xl font-semibold text-white pt-10">
-            <Link 
-              to="/home" 
+            <Link
+              to="/home"
               className="w-full text-center py-3 hover:bg-brand-secondary/50"
               onClick={() => setIsOpen(false)}
             >
               Home
             </Link>
-            
-            <Link 
-              to="/about" 
+
+            <Link
+              to="/root-map"
               className="w-full text-center py-3 hover:bg-brand-secondary/50"
               onClick={() => setIsOpen(false)}
             >
               Root Map
             </Link>
-            
-            <Link 
-              to="/contact" 
+
+            <Link
+              to="/ask-us"
               className="w-full text-center py-3 hover:bg-brand-secondary/50"
               onClick={() => setIsOpen(false)}
             >
               Ask Us
             </Link>
-            
-            <Link 
-              to="/disclaimer" 
+
+            <Link
+              to="/guidance"
               className="w-full text-center py-3 hover:bg-brand-secondary/50"
               onClick={() => setIsOpen(false)}
             >
               Guidance
             </Link>
-            
+
             {/* Mobile Register/Login Dropdown */}
             <div className="w-full text-center">
-              <button 
+              <button
                 className="py-3 flex items-center justify-center w-full hover:bg-brand-secondary/50"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               >
-                Register/Login <ChevronDown size={20} className={`ml-2 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
+                Register/Login{" "}
+                <ChevronDown
+                  size={20}
+                  className={`ml-2 transition-transform ${
+                    isDropdownOpen ? "rotate-180" : ""
+                  }`}
+                />
               </button>
-              
+
               {isDropdownOpen && (
                 <div className="bg-brand-clay rounded-md mt-1 mx-4">
-                  <Link 
-                    to="/register" 
+                  <Link
+                    to="/register"
                     className="block py-2 hover:bg-brand-secondary/50 rounded-t-md"
                     onClick={() => {
                       setIsOpen(false);
@@ -144,8 +166,8 @@ function Nav() {
                   >
                     Register
                   </Link>
-                  <Link 
-                    to="/login" 
+                  <Link
+                    to="/login"
                     className="block py-2 hover:bg-brand-secondary/50 rounded-b-md"
                     onClick={() => {
                       setIsOpen(false);
@@ -157,17 +179,17 @@ function Nav() {
                 </div>
               )}
             </div>
-            
-            <Link 
-              to="/userdashboard" 
+
+            <Link
+              to="/user-dashboard"
               className="w-full text-center py-3 hover:bg-brand-secondary/50"
               onClick={() => setIsOpen(false)}
             >
               User Dashboard
             </Link>
-            
-            <Link 
-              to="/herbalistdashboard" 
+
+            <Link
+              to="/herbalist-dashboard"
               className="w-full text-center py-3 hover:bg-brand-secondary/50"
               onClick={() => setIsOpen(false)}
             >
