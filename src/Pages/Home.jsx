@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 function Home() {
   return (
-    <main className="bg-brand-secondary min-h-screen mt-16 text-brand-darkText">
+    <main className="bg-brand-secondary min-h-screen text-brand-darkText">
       {/* Hero Section */}
       <section className="relative text-center py-16 px-6 bg-brand-white">
         <div className="max-w-3xl mx-auto">
@@ -45,7 +45,7 @@ function Home() {
             Enter a symptom or natural ingredient
           </p>
         </div>
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.5 }}
@@ -64,7 +64,7 @@ function Home() {
 
       {/* Remedies Section */}
       <section className="max-w-6xl mx-auto mt-16 px-4 pb-16">
-        <motion.h3 
+        <motion.h3
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
