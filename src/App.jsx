@@ -1,6 +1,5 @@
-import { useState } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Nav from "./Components/Nav/Nav";
 import About from "./Pages/Root Map";
 import Home from "./Pages/Home";
@@ -30,7 +29,7 @@ function App() {
           <Route path="/register-login" element={<ToRegOrLog />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/create-remedy" element={<NewRemedy/>} />
+          <Route path="/create-remedy" element={<NewRemedy />} />
         </Routes>
       </Router>
     </>
